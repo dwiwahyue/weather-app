@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather-App</title>
+    <!-- Icon -->
+    <script
+      src="https://kit.fontawesome.com/5db64b5fdb.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=wb_twilight"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h2>Open<span>Weather</span></h2>
+    </header>
+
+    <main>
+      <section class="search">
+        <h3>Current <span>Weather</span></h3>
+        <div class="weather-icon">
+          <i
+            class="fa-solid fa-location-dot fa-xl"
+            style="color: rgb(255, 212, 59)"
+          ></i>
+          <p id="cityValue"></p>
+        </div>
+        <div class="search-box">
+          <input type="text" placeholder="Search city..." id="cityInput" />
+          <button id="searchBtn"><i class="fa-solid fa-search"></i></button>
+        </div>
+      </section>
+      <section class="weather-info">
+        <div class="main-card">
+          <div class="card-picture">
+            <img id="weatherIcon" />
+            <h4 id="temperature"></h4>
+            <h5 id="description"></h5>
+            <h6 id="feel"></h6>
+            <p id="time"></p>
+          </div>
+          <div class="card-info">
+            <div class="info-icon">
+              <div class="icon">
+                <i class="fa-solid fa-wind"></i>
+                <p>Wind</p>
+              </div>
+              <p id="wind"></p>
+            </div>
+            <div class="info-icon">
+              <div class="icon">
+                <i class="fa-solid fa-droplet"></i>
+                <p>Humidity</p>
+              </div>
+              <p id="humidity"></p>
+            </div>
+            <div class="info-icon">
+              <div class="icon">
+                <i class="fa-regular fa-eye"></i>
+                <p>Visibility</p>
+              </div>
+              <p id="visibility"></p>
+            </div>
+            <div class="info-icon">
+              <div class="icon">
+                <i class="fa-solid fa-gauge"></i>
+                <p>Pressure</p>
+              </div>
+              <p id="pressure"></p>
+            </div>
+            <div class="info-icon">
+              <div class="icon">
+                <i class="fa-solid fa-sun"></i>
+                <p>UV Index</p>
+              </div>
+              <p id="uvi"></p>
+            </div>
+            <div class="info-icon">
+              <div class="icon">
+                <span class="material-symbols-outlined">wb_twilight</span>
+                <p>Sunset</p>
+              </div>
+              <p id="sunset"></p>
+            </div>
+          </div>
+        </div>
+        <div id="map"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2026 <strong>Open<span>Weather</span></strong
+        >. All rights reserved.
+      </p>
+    </footer>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
